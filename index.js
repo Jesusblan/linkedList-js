@@ -9,6 +9,30 @@ class listNode{
         this.data = data;
         this.next = next;
     }
+    //add node to the end
+
+    //add node to the start
+
+    //total size of list
+
+    //return first node
+
+    //return last node
+
+    //return node at desired index
+
+    //remove last node
+
+    //return true or false if a desired value is on the list
+
+    //return the index of a searched value and return null if not found
+
+    //display all nodes as a string 
+
+    //insert a new node at the desired index with the desired value
+
+    //remove a node at given index
+
 }
 
 
