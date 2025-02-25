@@ -3,7 +3,22 @@ class linkedList{
         this.head = head;
     }
     //add node to the end
+    insertLast(data){
+        let newNode = new listNode(data);
+        let current;
+        if (!this.head){
+            this.head = newNode;
+        }
+        else {
+            current = this.head;
 
+            while (current.next) {
+                current = current.next;
+            }
+
+            current.next = newNode;
+        }
+    }
     //add node to the start
 
     //total size of list
@@ -25,8 +40,8 @@ class linkedList{
         let current = this.head;
 
         while (current){
-            console.log(current.data)
-            current = current.next
+            console.log(current.data);
+            current = current.next;
         }
     }
     //insert a new node at the desired index with the desired value
@@ -54,6 +69,7 @@ let node3 = new listNode("parrot");
 node1.next = node2;
 node2.next = node3;
 
+list.insertLast("mouse")
 
 console.log(list)
 console.log(node1)
