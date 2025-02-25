@@ -54,6 +54,18 @@ class linkedList{
     }
 
     //return node at desired index
+    getAt(index){
+        let current = this.head;
+        let counter = 0;
+
+        while (current){
+            if (counter == index){
+                return current.data;
+            }
+            counter ++;
+            current = current.next;
+        }
+    }
 
     //remove last node
 
@@ -103,11 +115,16 @@ node2.next = node3;
 list.insertLast("mouse");
 list.insertFirst("fish");
 
+console.log("<-------------------------------->")
 
 list.printList();
+
+console.log("<---->")
 
 console.log("Items in list: "+list.listSize());
 
 console.log("First item is: "+list.firstListItem())
 console.log("Last item is: "+list.lastListItem())
+console.log("The item in index 2 is: "+list.getAt(2))
+
 console.log("<-------------------------------->")
