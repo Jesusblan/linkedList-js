@@ -39,6 +39,9 @@ class linkedList{
     }
 
     //return first node
+    firstListItem(){
+        return this.head;
+    }
 
     //return last node
 
@@ -74,6 +77,10 @@ class listNode{
 }
 
 
+
+
+
+
 let node1 = new listNode("cat");
 
 let list = new linkedList(node1);
@@ -92,3 +99,5 @@ list.insertFirst("fish");
 list.printList();
 
 console.log("Items in list: "+list.listSize());
+
+console.log(list.firstListItem())
