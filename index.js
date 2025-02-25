@@ -2,13 +2,6 @@ class linkedList{
     constructor(head = null){
         this.head = head;
     }
-}
-
-class listNode{
-    constructor(data, next = null){
-        this.data = data;
-        this.next = next;
-    }
     //add node to the end
 
     //add node to the start
@@ -28,11 +21,25 @@ class listNode{
     //return the index of a searched value and return null if not found
 
     //display all nodes as a string 
+    printList(){
+        let current = this.head;
 
+        while (current){
+            console.log(current.data)
+            current = current.next
+        }
+    }
     //insert a new node at the desired index with the desired value
 
     //remove a node at given index
+}
 
+
+class listNode{
+    constructor(data, next = null){
+        this.data = data;
+        this.next = next;
+    }
 }
 
 
@@ -50,3 +57,4 @@ node2.next = node3;
 
 console.log(list)
 console.log(node1)
+list.printList()
