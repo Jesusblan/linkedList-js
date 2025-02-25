@@ -40,10 +40,18 @@ class linkedList{
 
     //return first node
     firstListItem(){
-        return this.head;
+        return this.head.data;
     }
 
     //return last node
+    lastListItem(){
+        let current = this.head;
+
+        while (current.next){
+            current = current.next;
+        }
+        return current.data;
+    }
 
     //return node at desired index
 
@@ -100,4 +108,6 @@ list.printList();
 
 console.log("Items in list: "+list.listSize());
 
-console.log(list.firstListItem())
+console.log("First item is: "+list.firstListItem())
+console.log("Last item is: "+list.lastListItem())
+console.log("<-------------------------------->")
