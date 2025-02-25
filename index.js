@@ -26,6 +26,17 @@ class linkedList{
     }
 
     //total size of list
+    listSize(){
+        let current = this.head;
+        let counter = 0;
+
+        while (current != null){
+            counter ++;
+            current = current.next;
+        }
+
+        return counter;
+    }
 
     //return first node
 
@@ -74,10 +85,10 @@ let node3 = new listNode("parrot");
 node1.next = node2;
 node2.next = node3;
 
-list.insertLast("mouse")
+list.insertLast("mouse");
+list.insertFirst("fish");
 
-list.insertFirst("fish")
 
-console.log(list)
-console.log(node1)
-list.printList()
+list.printList();
+
+console.log("Items in list: "+list.listSize());
