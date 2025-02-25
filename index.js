@@ -19,7 +19,11 @@ class linkedList{
             current.next = newNode;
         }
     }
+
     //add node to the start
+    insertFirst(data){
+        this.head = new listNode(data, this.head);
+    }
 
     //total size of list
 
@@ -44,6 +48,7 @@ class linkedList{
             current = current.next;
         }
     }
+    
     //insert a new node at the desired index with the desired value
 
     //remove a node at given index
@@ -70,6 +75,8 @@ node1.next = node2;
 node2.next = node3;
 
 list.insertLast("mouse")
+
+list.insertFirst("fish")
 
 console.log(list)
 console.log(node1)
