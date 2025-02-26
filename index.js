@@ -97,6 +97,18 @@ class linkedList{
     }
 
     //return the index of a searched value and return null if not found
+    searchReturn(data){
+        let current = this.head;
+
+        while (current){
+            if (current.data == data){
+                return current.data;
+            }
+            
+            current = current.next;
+        }
+        return false;
+    }
 
     //display all nodes as a string 
     printList(){
