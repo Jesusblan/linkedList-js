@@ -83,6 +83,18 @@ class linkedList{
     }
 
     //return true or false if a desired value is on the list
+    search(data){
+        let current = this.head;
+
+        while (current){
+            if (current.data == data){
+                return true;
+            }
+            
+            current = current.next;
+        }
+        return false;
+    }
 
     //return the index of a searched value and return null if not found
 
@@ -137,6 +149,8 @@ console.log("<---->")
 console.log("here we remove the last node with removeLast function")
 list.removeLast();
 
+console.log("this is searching for dog in the list: "+list.search("dog"))
+console.log("this is searching for mouse(removed before): "+list.search("mouse"))
 
 console.log("Items in list: "+list.listSize());
 
