@@ -68,6 +68,19 @@ class linkedList{
     }
 
     //remove last node
+    removeLast(){
+        let current = this.head;
+        let previous;
+
+        while (current.next){
+            previous = current;
+            current = current.next;
+        }
+            
+        delete(previous.next);
+        
+
+    }
 
     //return true or false if a desired value is on the list
 
@@ -121,10 +134,15 @@ list.printList();
 
 console.log("<---->")
 
+console.log("here we remove the last node with removeLast function")
+list.removeLast();
+
+
 console.log("Items in list: "+list.listSize());
 
 console.log("First item is: "+list.firstListItem())
 console.log("Last item is: "+list.lastListItem())
 console.log("The item in index 2 is: "+list.getAt(2))
+
 
 console.log("<-------------------------------->")
