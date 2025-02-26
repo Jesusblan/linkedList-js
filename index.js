@@ -120,9 +120,6 @@ class linkedList{
         }
     }
     
-    //insert a new node at the desired index with the desired value
-
-    //remove a node at given index
 }
 
 
